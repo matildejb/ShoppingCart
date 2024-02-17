@@ -1,110 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Carrito de la compra Agoodshop</title>
+		<link rel="stylesheet" href="styles.css" type="text/css" />
+		<!--FAVICON-->
+		<link rel="icon" type="image/png" href="img/carrito.png" />
+		<!--TIPOGRAFÍA-->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Edu+TAS+Beginner:wght@700&family=Open+Sans:ital,wght@1,300&family=Playpen+Sans:wght@200&family=Roboto&display=swap"
+			rel="stylesheet" />
+		<!--BOOSTRAP-->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+			crossorigin="anonymous" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de la compra Agoodshop</title>
-    <link rel="stylesheet" href="styles.css" type="text/css" />
-    <!--TIPOGRAFÍA-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Edu+TAS+Beginner:wght@700&family=Open+Sans:ital,wght@1,300&family=Playpen+Sans:wght@200&family=Roboto&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
+	<body>
+		<!--TITULO CARRITO COMPRA-->
+		<div class="wrapper">
+			<h3 class="mt-3 ms-4 the-header">agoodshop</h3>
+		</div>
+		<div class="line"></div>
 
-<body>
-<!--TITULO CARRITO COMPRA-->
-    <div class="wrapper">
-        <h3 class="mt-3 ms-4 the-header">agoodshop</h3>
-    </div>
-    <div class="line"></div>
+		<!--CONTENIDO PRINCIPAL-->
+		<main class="wrapper">
+			<div class="carrito" id="carrito">
+					<div class="container">
+						<table class="table mt-4 tableMain">
+							<thead>
+								<tr>
+									<th class="list__head--title">Producto</th>
+									<th class="list__head--title">Cantidad</th>
+									<th class="list__head--title">Unidad</th>
+									<th class="list__head--title">Total</th>
+								</tr>
+							</thead>
+							<tbody id="carrito-products">
+								<!--<tr class="list__row">
+									<td class="list__row-cell">
+										<p class="list__title">iFhone 13 Pro</p>
+										<p class="list__sku">0K3QOSOV4V</p>
+									</td>
+									<td class="list__row-cell">
+										<button class="list__control">-</button>
+										<input
+											type="number"
+											class="list__control-number"
+											value="0" />
+										<button class="list__control">+</button>
+									</td>
+									<td class="list__row-cell">
+										<span class="list__price">938.99€</span>
+									</td>
+									<td class="list__row-cell">
+										<span class="list__price">0€</span>
+									</td>
+								</tr>-->
+							</tbody>
+						</table>
+        
 
-<!--CONTENIDO PRINCIPAL-->
-    <div class="wrapper">
-    <div class="container">
-            <table class="table mt-4 tableMain">
-                <thead>
-                    <tr>
-                        <td>Producto</td>
-                        <td>Cantidad</td>
-                        <td>Unidad</td>
-                        <td>Total</td>
-                    </tr>
-                </thead>
-                <tbody class="table-group-divider border-secondary">
-                    <tr>
-                        <th scope="row">iFhone 13 Pro
-                            <div class="description">Ref: 0K3QOSOV4V</div>
-                        </th>
-                        <td>
-                            <div class="input-group">
-                                <button class="btn" type="button">-</button>
-                                <input type="number" class="form-control" aria-label="Cantidad de productos" value="0">
-                                <div class="input-group-append">
-                                    <button class="btn" type="button">+</button>
-                                </div>
-                            </div>
-                        </td>
-                        <td>0€</td>
-                        <td>0€</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Cargador
-                            <div class="description">Ref: TGD5XORY1L</div>
-                        </th>
-                        <td>
-                            <div class="input-group">
-                                <button class="btn" type="button">-</button>
-                                <input type="number" class="form-control" aria-label="Cantidad de productos" value="0">
-                                <div class="input-group-append">
-                                    <button class="btn" type="button">+</button>
-                                </div>
-                            </div>
-                        </td>
-                        <td>0€</td>
-                        <td>0€</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="border-0">Funda de piel
-                            <div class="description">Ref: IOKW9BQ9F3</div>
-                        </th>
-                        <td class="border-0">
-                            <div class="input-group">
-                                <button class="btn" type="button">-</button>
-                                <input type="number" class="form-control" aria-label="Cantidad de productos" value="0">
-                                <div class="input-group-append">
-                                    <button class="btn" type="button">+</button>
-                                </div>
-                            </div>
-                        </td>
-                        <td class="border-0">0€</td>
-                        <td class="border-0">0€</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <table class="table mt-5 table-light tablePrice">
-                <thead>
-                    <tr>
-                        <th colspan="2" class="p-3">Total</th>
-                    </tr>
-                </thead>
-                <tbody class= "border-0">
-                    <tr>
-                        <td class="border-0 p-3">Total</td>
-                        <th class="border-0 col-1 p-3">0€</th>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-</body>
-
+						<table class="table mt-5 tablePrice">
+							<tbody id="carrito-total-products">
+                                <!--<tr>
+                                    <td>Iphone</td>
+                                    <td>13$</td>
+                                </tr>-->
+							</tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Total</th>
+                                    <td id="carrito-total">0€</td>
+                                </tr>                               
+                            </tfoot>
+						</table>
+                        </div>
+					</div>
+		</main>
+		<script src="carrito.js"></script>
+		<script src="script.js"></script>
+	</body>
 </html>
